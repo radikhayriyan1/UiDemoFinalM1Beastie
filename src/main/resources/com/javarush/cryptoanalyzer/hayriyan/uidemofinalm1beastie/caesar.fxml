@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+         minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+         tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1"
+         xmlns="http://javafx.com/javafx/21"
+         fx:controller="com.javarush.cryptoanalyzer.hayriyan.uidemofinalm1beastie.CryptoAnalyzerController">
+  <tabs>
+    <Tab text="Encrypt">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="436.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@./caesar.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="24.0" layoutY="60.0" prefHeight="17.0" prefWidth="96.0" text="Choose File:" />
+                  <Label layoutX="24.0" layoutY="94.0" text="Fill Encryption Key:" />
+                  <TextField layoutX="161.0" layoutY="90.0" fx:id="encryptKeyField"/>
+                  <Button layoutX="161.0" layoutY="56.0" mnemonicParsing="false" text="Select" onAction="#onEncryptSelectFile"/>
+                  <Button layoutX="185.0" layoutY="247.0" mnemonicParsing="false" text="Encrypt" onAction="#onEncrypt">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Decrypt">
+      <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="436.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                          <Image url="@./caesar.png" />
+                      </image>
+                  </ImageView>
+                  <Label layoutX="24.0" layoutY="60.0" prefHeight="17.0" prefWidth="96.0" text="Choose File:" />
+                  <Label layoutX="24.0" layoutY="94.0" text="Fill Decryption Key:" />
+                  <TextField layoutX="161.0" layoutY="90.0" fx:id="decryptKeyField"/>
+                  <Button layoutX="161.0" layoutY="56.0" mnemonicParsing="false" text="Select" onAction="#onDecryptSelectFile"/>
+                  <Button layoutX="185.0" layoutY="247.0" mnemonicParsing="false" text="Decrypt" onAction="#onDecrypt">
+                      <font>
+                          <Font size="32.0" />
+                      </font>
+                  </Button>
+              </children>
+          </AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Brute Force">
+        <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <children>
+                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="436.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@./caesar.png" />
+                        </image>
+                    </ImageView>
+                    <Label layoutX="24.0" layoutY="60.0" prefHeight="17.0" prefWidth="96.0" text="Choose File:" />
+                    <Label layoutX="24.0" layoutY="94.0" text="Fill Decryption Key:" />
+                    <TextField layoutX="161.0" layoutY="90.0" fx:id="bruteForceDecryptKeyField"/>
+                    <Button layoutX="161.0" layoutY="56.0" mnemonicParsing="false" text="Select" onAction="#onBruteForceDecryptSelectFile"/>
+                    <Button layoutX="185.0" layoutY="247.0" mnemonicParsing="false" text="Decrypt" onAction="#onBruteForceDecrypt">
+                        <font>
+                            <Font size="32.0" />
+                        </font>
+                    </Button>
+                </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Statistical Decrypt">
+        <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <children>
+                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="436.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@./caesar.png" />
+                        </image>
+                    </ImageView>
+                    <Label layoutX="24.0" layoutY="60.0" prefHeight="17.0" prefWidth="96.0" text="Choose File:" />
+                    <Label layoutX="24.0" layoutY="94.0" text="Fill Decryption Key:" />
+                    <TextField layoutX="161.0" layoutY="90.0" fx:id="statisticalDecryptKeyField"/>
+                    <Button layoutX="161.0" layoutY="56.0" mnemonicParsing="false" text="Select" onAction="#onStatisticalDecryptSelectFile"/>
+                    <Button layoutX="185.0" layoutY="247.0" mnemonicParsing="false" text="Decrypt" onAction="#onStatisticalDecrypt">
+                        <font>
+                            <Font size="32.0" />
+                        </font>
+                    </Button>
+                </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</TabPane>
