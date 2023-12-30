@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.javarush.cryptoanalyzer.hayriyan.uidemofinalm1beastie/com.javarush.cryptoanalyzer.hayriyan.uidemofinalm1beastie.HelloApplication
+                                com.javarush.cryptoanalyzer.hayriyan.uidemofinalm1beastie/com.javarush.cryptoanalyzer.hayriyan.uidemofinalm1beastie.CryptoAnalyzerApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
