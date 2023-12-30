@@ -1,11 +1,13 @@
-package com.javarush.cryptoanalyzer.hayriyan.uidemofinalm1beastie;
+package com.javarush.cryptoanalyzer.hayriyan.uidemofinalm1beastie.controller;
 
+import com.javarush.cryptoanalyzer.hayriyan.uidemofinalm1beastie.service.EncryptService;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 import java.io.File;
 
 public class CryptoAnalyzerController {
+    EncryptService encryptService;
 
     static File encryptFile;
     static File decryptFile;
@@ -50,7 +52,8 @@ public class CryptoAnalyzerController {
 
     @FXML
     protected void onEncrypt() {
-        System.out.println(encryptKeyField.getCharacters());
+        encryptService = new EncryptService();
+        encryptService.doEncrypt(encryptFile, encryptKeyField.getCharacters().toString());
     }
 
     @FXML
