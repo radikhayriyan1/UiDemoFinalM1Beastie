@@ -70,9 +70,7 @@
                         </image>
                     </ImageView>
                     <Label layoutX="24.0" layoutY="60.0" prefHeight="17.0" prefWidth="96.0" text="Choose File:" />
-                    <Label layoutX="24.0" layoutY="94.0" text="Fill Decryption Key:" />
-                    <TextField layoutX="161.0" layoutY="90.0" fx:id="bruteForceDecryptKeyField"/>
-                    <Button layoutX="161.0" layoutY="56.0" mnemonicParsing="false" text="Select" onAction="#onBruteForceDecryptSelectFile"/>
+                    <Button layoutX="161.0" layoutY="56.0" fx:id="bruteForceDecryptSelect" mnemonicParsing="false" text="Select" onAction="#onBruteForceDecryptSelectFile"/>
                     <Button layoutX="185.0" layoutY="247.0" mnemonicParsing="false" text="Decrypt" onAction="#onBruteForceDecrypt">
                         <font>
                             <Font size="32.0" />
@@ -92,9 +90,7 @@
                         </image>
                     </ImageView>
                     <Label layoutX="24.0" layoutY="60.0" prefHeight="17.0" prefWidth="96.0" text="Choose File:" />
-                    <Label layoutX="24.0" layoutY="94.0" text="Fill Decryption Key:" />
-                    <TextField layoutX="161.0" layoutY="90.0" fx:id="statisticalDecryptKeyField"/>
-                    <Button layoutX="161.0" layoutY="56.0" mnemonicParsing="false" text="Select" onAction="#onStatisticalDecryptSelectFile"/>
+                    <Button layoutX="161.0" layoutY="56.0" fx:id="statisticalDecryptSelect" mnemonicParsing="false" text="Select" onAction="#onStatisticalDecryptSelectFile"/>
                     <Button layoutX="185.0" layoutY="247.0" mnemonicParsing="false" text="Decrypt" onAction="#onStatisticalDecrypt">
                         <font>
                             <Font size="32.0" />

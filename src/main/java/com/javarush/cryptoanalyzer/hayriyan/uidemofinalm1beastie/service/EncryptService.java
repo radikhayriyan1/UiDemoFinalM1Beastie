@@ -1,5 +1,4 @@
 package com.javarush.cryptoanalyzer.hayriyan.uidemofinalm1beastie.service;
-import com.javarush.cryptoanalyzer.hayriyan.uidemofinalm1beastie.constant.Alphabet;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,6 +10,11 @@ import java.util.Map;
 
 public class EncryptService {
     private static final Map<Character, Integer> charIndexMap = new HashMap<>();
+    private final char[] alphabet;
+
+    public EncryptService(char[] alphabet) {
+        this.alphabet = alphabet;
+    }
     public boolean doEncrypt(File file, String encryptKey) {
         if (file == null) {
             NotificationService.showNotification("You should select a file");
@@ -40,8 +44,8 @@ public class EncryptService {
     }
 
     private String encryptCaesar(String input, int key) {
-        for (int i = 0; i < Alphabet.RU.length; i++) {
-            charIndexMap.put(Alphabet.RU[i], i);
+        for (int i = 0; i < alphabet.length; i++) {
+            charIndexMap.put(alphabet[i], i);
         }
         StringBuilder encryptedText = new StringBuilder();
 
@@ -49,8 +53,8 @@ public class EncryptService {
             Integer index = charIndexMap.get(ch);
 
             if (index != null) {
-                int newIndex = (index + key) % Alphabet.RU.length;
-                encryptedText.append(Alphabet.RU[newIndex]);
+                int newIndex = (index + key) % alphabet.length;
+                encryptedText.append(alphabet[newIndex]);
             } else {
                 encryptedText.append(ch);
             }
