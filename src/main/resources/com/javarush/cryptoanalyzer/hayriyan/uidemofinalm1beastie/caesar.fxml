@@ -29,7 +29,7 @@
                   <Label layoutX="24.0" layoutY="60.0" prefHeight="17.0" prefWidth="96.0" text="Choose File:" />
                   <Label layoutX="24.0" layoutY="94.0" text="Fill Encryption Key:" />
                   <TextField layoutX="161.0" layoutY="90.0" fx:id="encryptKeyField"/>
-                  <Button layoutX="161.0" layoutY="56.0" mnemonicParsing="false" text="Select" onAction="#onEncryptSelectFile"/>
+                  <Button layoutX="161.0" layoutY="56.0" fx:id="encryptSelect" mnemonicParsing="false" text="Select" onAction="#onEncryptSelectFile"/>
                   <Button layoutX="185.0" layoutY="247.0" mnemonicParsing="false" text="Encrypt" onAction="#onEncrypt">
                      <font>
                         <Font size="32.0" />
@@ -50,7 +50,7 @@
                   <Label layoutX="24.0" layoutY="60.0" prefHeight="17.0" prefWidth="96.0" text="Choose File:" />
                   <Label layoutX="24.0" layoutY="94.0" text="Fill Decryption Key:" />
                   <TextField layoutX="161.0" layoutY="90.0" fx:id="decryptKeyField"/>
-                  <Button layoutX="161.0" layoutY="56.0" mnemonicParsing="false" text="Select" onAction="#onDecryptSelectFile"/>
+                  <Button layoutX="161.0" layoutY="56.0" fx:id="decryptSelect" mnemonicParsing="false" text="Select" onAction="#onDecryptSelectFile"/>
                   <Button layoutX="185.0" layoutY="247.0" mnemonicParsing="false" text="Decrypt" onAction="#onDecrypt">
                       <font>
                           <Font size="32.0" />
