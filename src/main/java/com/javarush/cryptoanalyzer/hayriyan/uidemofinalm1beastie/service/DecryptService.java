@@ -39,7 +39,7 @@ public class DecryptService {
             NotificationService.showNotification("Something went wrong, please try again");
             return false;
         }
-        NotificationService.showNotification("Encryption was successfully done.");
+        NotificationService.showNotification("Decryption was successfully done.");
         return true;
     }
 
@@ -61,7 +61,7 @@ public class DecryptService {
             NotificationService.showNotification("Something went wrong, please try again");
             return false;
         }
-        NotificationService.showNotification("Encryption was successfully done.");
+        NotificationService.showNotification("Decryption was successfully done.");
         return true;
     }
 

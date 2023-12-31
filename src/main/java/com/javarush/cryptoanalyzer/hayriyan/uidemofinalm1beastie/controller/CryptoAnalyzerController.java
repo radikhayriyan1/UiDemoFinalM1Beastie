@@ -19,7 +19,6 @@ public class CryptoAnalyzerController {
     static File encryptFile;
     static File decryptFile;
     static File bruteForceDecryptFile;
-    static File statisticalDecryptFile;
 
     private Scene scene;
 
@@ -61,12 +60,6 @@ public class CryptoAnalyzerController {
     }
 
     @FXML
-    protected void onStatisticalDecryptSelectFile() {
-        FileChooser fileChooser = new FileChooser();
-        statisticalDecryptFile = fileChooser.showOpenDialog(null);
-    }
-
-    @FXML
     protected void onEncrypt() {
         encryptService = new EncryptService(Alphabet.RU);
         boolean isFileEncrypted = encryptService.doEncrypt(encryptFile, encryptKeyField.getCharacters().toString());
@@ -96,9 +89,5 @@ public class CryptoAnalyzerController {
             bruteForceDecryptFile = null;
             LayoutService.changeButtonTextById(LayoutProperties.bruteForceDecryptSelectFieldId, scene, "Select");
         }
-    }
-
-    @FXML
-    protected void onStatisticalDecrypt() {
     }
 }

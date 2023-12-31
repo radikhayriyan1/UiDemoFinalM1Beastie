@@ -80,26 +80,6 @@
             </AnchorPane>
         </content>
       </Tab>
-      <Tab text="Statistical Decrypt">
-        <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                <children>
-                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="436.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@./caesar.png" />
-                        </image>
-                    </ImageView>
-                    <Label layoutX="24.0" layoutY="60.0" prefHeight="17.0" prefWidth="96.0" text="Choose File:" />
-                    <Button layoutX="161.0" layoutY="56.0" fx:id="statisticalDecryptSelect" mnemonicParsing="false" text="Select" onAction="#onStatisticalDecryptSelectFile"/>
-                    <Button layoutX="185.0" layoutY="247.0" mnemonicParsing="false" text="Decrypt" onAction="#onStatisticalDecrypt">
-                        <font>
-                            <Font size="32.0" />
-                        </font>
-                    </Button>
-                </children>
-            </AnchorPane>
-        </content>
-      </Tab>
   </tabs>
    <opaqueInsets>
       <Insets />
